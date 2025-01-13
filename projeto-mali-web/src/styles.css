@@ -1,0 +1,198 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  text-align: center;
+}
+
+.simulator {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+header {
+  background-color: #3f0245;
+  color: white;
+  padding: 10px 0;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  background-color: #fad3fd;
+}
+
+.upload-section,
+.editor-section {
+  margin-bottom: 10px;
+}
+
+.upload-section h2,
+.editor-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.canvas-container {
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300;
+  height: 400;
+  position: relative;
+  background-color: #ffffff;
+}
+
+#canvas {
+  width: 200;
+  height: 200;
+  display: block;
+  background-color: #3f0245;
+}
+
+footer {
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Estilo do Carrossel */
+.accessories-carousel {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: none !important;  /* Escondido por padrão */
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel.active {
+  display: flex !important; /* Exibir apenas o carrossel ativo */
+}
+
+.carousel img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carousel img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn {
+  background-color: #3f0245;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: #3f0245;
+}
+
+.carousel-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Filtro de Cores com Círculos */
+.filter-options {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filter-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-circle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip para os Círculos */
+.filter-circle[title] {
+  position: relative;
+}
+
+.filter-circle[title]::after {
+  content: attr(title);
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.filter-circle:hover::after {
+  opacity: 1;
+}
+
+/* Container dos Carrosséis */
+.accessories-container {
+  margin-top: 20px;
+  position: relative;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup Editor</title>
+  <link rel="stylesheet" href="../src/styles.css">
+</head>
+<div class="simulator">
+<body>
+  <header>
+    <h1>Simulador MALI</h1>
+  </header>
+
+  <main>
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <h2>Realize o upload da sua foto de vestido</h2>
+      <input type="file" id="upload" accept="image/*">
+    </section>
+
+  <!-- Carrossel de Acessórios -->
+  <section class="editor-section">
+    <h2>Selecione a melhor opção</h2>
+    <div class="canvas-container">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Filtro de Cores com Círculos -->
+    <div class="filter-options">
+      <div class="filter-circle" data-color="all" style="background-color: #ccc;" title="Todas"></div>
+      <div class="filter-circle" data-color="preto" style="background-color: black;" title="Preta"></div>
+      <div class="filter-circle" data-color="branco" style="background-color: white; border: 1px solid #ccc;" title="Branca"></div>
+      <div class="filter-circle" data-color="azul" style="background-color: blue;" title="Azul"></div>
+      <div class="filter-circle" data-color="verde" style="background-color: green;" title="Verde"></div>
+      <div class="filter-circle" data-color="cinza" style="background-color: gray;" title="Cinza"></div>
+      <div class="filter-circle" data-color="rosa" style="background-color: rgb(247, 20, 243);" title="Rosa"></div>
+
+    </div>
+    <!-- Carrosséis de Acessórios -->
+    <div class="accessories-container">
+      <!-- Carrossel Todas -->
+      <div class="carousel all active"></div>
+      <!-- Carrossel Preto -->
+      <div class="carousel preto"></div>
+       <!-- Carrossel Branco -->
+      <div class="carousel branco"></div>
+      <!-- Carrossel Azul -->
+      <div class="carousel azul"></div>
+      <!-- Carrossel Verde -->
+      <div class="carousel verde"></div>
+      <!-- Carrossel Cinza -->
+      <div class="carousel cinza"></div>
+      <!-- Carrossel Rosa -->
+      <div class="carousel rosa"></div>
+    </div>
+    <button class="carousel-btn prev-btn">←</button>
+    <button class="carousel-btn next-btn">→</button>
+
+  </section>
+
+  <footer>
+    <p>© 2024 Mali Mockup Editor. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+  <script src="../src/script.js"></script>
+</body>
+</div>
+</html>
