@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Fazer a requisição para a API correspondente à cor
-      https://simulador-bolsa.onrender.com/bolsas/opcoes-preto/preta01.png
       const response = await fetch(`https://simulador-bolsa.onrender.com/api/bolsas/${color}`);
       if (!response.ok) {
         throw new Error(`Erro HTTP! Status: ${response.status}`);
