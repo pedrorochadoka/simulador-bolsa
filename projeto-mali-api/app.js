@@ -18,5 +18,5 @@ app.use('/api', routes);
 
 // Iniciar o servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${PORT} ou https://simulador-bolsa.onrender.com/`);
 });
