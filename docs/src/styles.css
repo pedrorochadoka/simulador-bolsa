@@ -15,13 +15,32 @@ body {
 }
 
 .simulator {
-  text-align: center;
   background-color: #fff;
-  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 1200px; /* Limita a largura máxima para telas grandes */
+  margin: 0 auto; /* Centraliza o elemento */
+  padding: 20px; /* Adiciona espaçamento interno */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+  flex-direction: column; /* Empilha os itens no eixo vertical por padrão */
+  gap: 20px; /* Espaço entre os elementos dentro do simulador */
+}
+
+/* Para telas maiores (desktop) */
+@media (min-width: 768px) {
+  .simulator {
+    flex-direction: row; /* Alinha os itens lado a lado no eixo horizontal */
+    justify-content: space-between; /* Distribui os itens com espaçamento */
+  }
+}
+
+/* Para telas muito pequenas (mobile) */
+@media (max-width: 480px) {
+  .simulator {
+    padding: 10px; /* Reduz o padding para telas pequenas */
+    gap: 10px; /* Menor espaçamento entre itens */
+  }
 }
 
 header {
@@ -52,7 +71,7 @@ main {
 
 .upload-section h2,
 .editor-section h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
@@ -82,7 +101,7 @@ input[type="file"] {
 footer {
   margin-top: 20px;
   color: #777;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Estilo do Carrossel */
@@ -194,5 +213,6 @@ footer {
 /* Container dos Carrosséis */
 .accessories-container {
   margin-top: 20px;
+  margin-bottom: 15px;
   position: relative;
 }
