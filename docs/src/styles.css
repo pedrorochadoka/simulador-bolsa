@@ -6,13 +6,70 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
   padding: 20px;
   text-align: center;
 }
+
+h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 14px;
+  color: #333;
+}
+
+.upload-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5a0077;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  gap: 10px;
+}
+
+.upload-button:hover {
+  background-color: #81199c;
+}
+
+.upload-button i {
+  font-size: 18px;
+}
+
+.upload-button input[type="file"] {
+  display: none; /* Esconde o input de upload */
+}
+
+.file-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
 
 .simulator {
   background-color: #fff;
@@ -61,15 +118,13 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 20px;
-  background-color: #fad3fd;
+  background-color: #fad3fda2;
 }
 
-.upload-section,
 .editor-section {
   margin-bottom: 10px;
 }
 
-.upload-section h2,
 .editor-section h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;

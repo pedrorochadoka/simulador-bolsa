@@ -6,7 +6,7 @@ const canvas = new fabric.Canvas('canvas', {
 });
 
 // Upload de imagem no canvas
-const uploadInput = document.getElementById('upload');
+const uploadInput = document.getElementById('file-upload');
 uploadInput.addEventListener('change', (e) => {
   const file = e.target.files[0];
   if (file) {
@@ -21,6 +21,13 @@ uploadInput.addEventListener('change', (e) => {
     reader.readAsDataURL(file);
   }
 });
+
+function updateFileName() {
+  const fileInput = document.getElementById('file-upload');
+  const fileNameDisplay = document.getElementById('file-name');
+  const fileName = fileInput.files[0]?.name || 'Nenhum arquivo selecionado';
+  fileNameDisplay.textContent = fileName;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   // Lista de cores disponíveis
