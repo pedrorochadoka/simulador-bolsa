@@ -8,6 +8,7 @@ const PORT = 3000;
 
 const allowedOrigins = [
   'https://pedrorochadoka.github.io', // Origem do seu frontend
+  'http://18.117.138.102:3000'
 ];
 
 // Middlewares globais
