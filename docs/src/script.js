@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Fazer a requisição para a API correspondente à cor
-      const response = await fetch(`https://simulador-bolsa.onrender.com/api/bolsas/${color}`);
+      const response = await fetch(`http://18.117.138.102:3000/api/bolsas/${color}`);
       if (!response.ok) {
         throw new Error(`Erro HTTP! Status: ${response.status}`);
       }
@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const imgElement = document.createElement('img');
         // Caso a cor seja "all", usar o caminho completo; caso contrário, construir o caminho manualmente
         const src = color === 'all'
-        ? `https://simulador-bolsa.onrender.com/bolsas/${image}` // Caminho completo fornecido pela API
-        : `https://simulador-bolsa.onrender.com/bolsas/opcoes-${color}/${image}`; // Caminho para cor específica
+        ? `http://18.117.138.102:3000/bolsas/${image}` // Caminho completo fornecido pela API
+        : `http://18.117.138.102:3000/bolsas/opcoes-${color}/${image}`; // Caminho para cor específica
         
         imgElement.src = src;
         imgElement.alt = image;
