@@ -7,14 +7,14 @@ const app = express();
 const PORT = 3000;
 
 const allowedOrigins = [
-  'https://pedrorochadoka.github.io', // Origem do seu frontend
-  'http://18.117.138.102:3000'
+  'https://pedrorochadoka.github.io', // Frontend hospedado no GitHub Pages
+  'http://18.117.138.102:3000'        // API local para testes
 ];
 
-// Middlewares globais
+// Middleware CORS
 app.use(cors({
   origin: (origin, callback) => {
-    // Permite requisições sem origem (e.g., ferramentas locais como Postman)
+    // Permite requisições sem origem (por exemplo, Postman)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -22,14 +22,6 @@ app.use(cors({
     }
   },
 }));
-
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://pedrorochadoka.github.io');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
-
 
 // Servir arquivos estáticos (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, '../public')));
